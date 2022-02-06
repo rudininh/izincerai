@@ -3,9 +3,9 @@
 namespace App\Models;
 
 
-class Post
+class Post 
 {
-      private static $blog_posts = [
+    private static $blog_posts = [
     [
         "title" => "Judul Post Pertama",
         "slug" => "judul-post-pertama",
@@ -22,6 +22,12 @@ class Post
 
     public static function all()
     {
-        return self::$blog_posts;
+        return collect(self::$blog_posts);
+    }
+
+    public static function find($slug)
+    {
+        $posts = static::all();
+        return $posts->firstWhere('slug', $slug);
     }
 }
