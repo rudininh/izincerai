@@ -20,7 +20,7 @@
     </div>   
     
     @else
-    <p class="text-center fs-4">No posts found.</p>
+    <p class="text-center fs-4">No posts founds.</p>
 
     @endif
 
