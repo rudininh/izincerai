@@ -7,10 +7,10 @@ class PostsController extends Controller
 {
     public function index()
     {
+        dd(request('search'));
         return view('posts', [
         "title" => "All Posts",
         "active" => "posts",
-        // "posts" => Post::all()
         "posts" => Post::latest()->get()
 
         ]);
