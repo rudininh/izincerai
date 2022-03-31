@@ -7,7 +7,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        dd(request('search'));
+        //dd(request('search'));
         return view('posts', [
         "title" => "All Posts",
         "active" => "posts",
