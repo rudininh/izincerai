@@ -11,7 +11,7 @@ class PostsController extends Controller
         return view('posts', [
         "title" => "All Posts",
         "active" => "posts",
-        "posts" => Post::latest()->filter(request(['search']))->get()
+        "posts" => Post::latest()->filter(request(['search', 'category']))->get()
 
         ]);
     }
