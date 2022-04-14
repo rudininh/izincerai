@@ -1,10 +1,11 @@
 <?php
 
-use App\Models\Post;
+
 use App\Models\Category;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
-use App\Models\User;
+use App\Http\Controllers\LoginController;
 
 
 
@@ -53,4 +54,4 @@ return view('categories',[
 
 });
 
-
+Route::get('/login', [LoginController::class, 'index']);
