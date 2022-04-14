@@ -10,6 +10,9 @@
 
     {{-- Bootstrap Icons --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+      {{-- My Style --}}
+      <link rel="stylesheet" href="/css/app.css">
     
     <title>RUDINI BLOG | {{ $title }}</title>
   </head>
