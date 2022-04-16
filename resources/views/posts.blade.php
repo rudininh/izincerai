@@ -59,7 +59,7 @@
     </div>
     
     @else
-    <p class="text-center fs-4">No posts founds.</p>
+    <p class="text-center fs-4">No post founds.</p>
     @endif
 
     <div class="d-flex justify-content-end">
