@@ -6,6 +6,8 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
 
 
 
@@ -55,3 +57,6 @@ return view('categories',[
 });
 
 Route::get('/login', [LoginController::class, 'index']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+
