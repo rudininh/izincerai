@@ -24,7 +24,7 @@
 
 
         <main class="form-signin">
-            <h1 class="h3 mb-3 fw-normal text-center">Please login</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Please login!</h1>
             <form action="/login" method="post">
               @csrf
               <div class="form-floating">
