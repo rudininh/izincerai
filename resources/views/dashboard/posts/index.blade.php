@@ -6,7 +6,7 @@
         <h1 class="h2">My Post</h1>
       </div>
 
-       <div class="table-responsive col-lg-6">
+       <div class="table-responsive col-lg-8">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
