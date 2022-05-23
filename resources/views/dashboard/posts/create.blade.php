@@ -7,7 +7,7 @@
         <h1 class="h2">Create New Post</h1>
     </div>
 <div class="col-lg-8">
- <form method="post" action="/dasboard/posts">
+ <form method="post" action="/dashboard/posts">
     @csrf
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
@@ -17,16 +17,27 @@
     <label for="slug" class="form-label">Slug</label>
     <input type="text" class="form-control" id="slug" name="slug">
   </div>
-  
+
+
+  <script>
+  const title = doucment.querySelector('#title');
+  const slug = document.querySelector('#slug');
+
+  title.addEventListener('change', function(){
+    fetch('/dashboard/posts/checkSlug?title=' + title.value)
+      .then(response => response.json())
+      .then(data => slug.value = data.slug)
+  });
+</script>
+
+
   <button type="submit" class="btn btn-primary">Create Post</button>
 </form>
 </div>
 
 </main>
 
-<script>
 
-</script>
 
 
 @endsection

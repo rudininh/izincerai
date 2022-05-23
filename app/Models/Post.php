@@ -62,7 +62,7 @@ class Post extends Model
             ]
         ];
     }
-}
+
 
 
 }
