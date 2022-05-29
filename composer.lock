@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f14c39ee7c2d3692c11027ea54bd2af",
+    "content-hash": "0ab072622c0f440de5b5d1b90f8e77b4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -198,16 +198,16 @@
         },
         {
             "name": "cviebrock/eloquent-sluggable",
-            "version": "8.0.8",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cviebrock/eloquent-sluggable.git",
-                "reference": "16e21db24d80180f870c3c7c4faf3d3af23f4117"
+                "reference": "becedfe5634740ee2bc3a3ee5ea01435547ee653"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/16e21db24d80180f870c3c7c4faf3d3af23f4117",
-                "reference": "16e21db24d80180f870c3c7c4faf3d3af23f4117",
+                "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/becedfe5634740ee2bc3a3ee5ea01435547ee653",
+                "reference": "becedfe5634740ee2bc3a3ee5ea01435547ee653",
                 "shasum": ""
             },
             "require": {
@@ -215,14 +215,14 @@
                 "illuminate/config": "^8.0",
                 "illuminate/database": "^8.0",
                 "illuminate/support": "^8.0",
-                "php": "^7.3|^8.0"
+                "php": "^7.3"
             },
             "require-dev": {
                 "limedeck/phpunit-detailed-printer": "^6.0",
                 "mockery/mockery": "^1.4.2",
                 "orchestra/database": "^6.0",
                 "orchestra/testbench": "^6.0",
-                "phpunit/phpunit": "^9.4"
+                "phpunit/phpunit": "^9.3"
             },
             "type": "library",
             "extra": {
@@ -259,15 +259,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cviebrock/eloquent-sluggable/issues",
-                "source": "https://github.com/cviebrock/eloquent-sluggable/tree/8.0.8"
+                "source": "https://github.com/cviebrock/eloquent-sluggable/tree/8.0.0"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/cviebrock",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-06-12T01:05:33+00:00"
+            "time": "2020-09-10T21:45:05+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

@@ -19,7 +19,7 @@
   </div>
 
 
-<script>
+{{-- <script>
         const title = document.querySelector("#title");
         const slug = document.querySelector("#slug");
 
@@ -28,13 +28,13 @@
             preslug = preslug.replace(/ /g,"-");
             slug.value = preslug.toLowerCase();
         });
-</script> 
+</script>  --}}
    <script>
-  const title = doucment.querySelector('#title');
+  const title = document.querySelector('#title');
   const slug = document.querySelector('#slug');
 
   title.addEventListener('change', function(){
-    fetch('/dashboard/posts/checkSlug?title=' + title.value)
+    fetch('/dashboard/post/checkSlug?title=' + title.value)
       .then(response => response.json())
       .then(data => slug.value = data.slug)
   });
