@@ -7,7 +7,7 @@
         <h1 class="h2">Create New Post</h1>
     </div>
 <div class="col-lg-8">
- <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
+ <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data" >
     @csrf
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
@@ -43,6 +43,8 @@
       @endforeach
     </select>
   </div>
+
+
 
   <div class="mb-3">
     <label for="formFile" class="form-label">Post Image</label>

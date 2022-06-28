@@ -7,7 +7,7 @@
         <h1 class="h2">Edit Post</h1>
     </div>
 <div class="col-lg-8">
- <form method="post" action="/dashboard/posts/{{ $post->slug }}" class="mb-5">
+ <form method="post" action="/dashboard/posts/{{ $post->slug }}" class="mb-5" enctype="multipart/form-data">
   @method ('put')   
   @csrf
   <div class="mb-3">
@@ -43,6 +43,19 @@
       @endif
       @endforeach
     </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Post Image</label>
+    <img class="img-preview img-fluid mb-3 col-sm-5">
+    <input class="form-control  @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()" >
+
+    @error('image')
+    <div class="invalid-feedback">
+     {{ $message }}
+    </div>
+     @enderror
+
   </div>
 
   <div class="mb-3">
