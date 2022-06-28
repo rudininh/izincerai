@@ -46,7 +46,8 @@
 
   <div class="mb-3">
     <label for="formFile" class="form-label">Post Image</label>
-    <input class="form-control  @error('image') is-invalid @enderror" type="file" id="image" name="image">
+    <img class="img-preview img-fluid mb-3 col-sm-5">
+    <input class="form-control  @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()" >
 
     @error('image')
     <div class="invalid-feedback">
@@ -81,8 +82,27 @@
       document.addEventListener('trix-file-accept', function(e){
         e.preventDefault();
       })
+
+      function previewImage() {
+
+        const input = document.querySelector('#image');
+                const image = document.querySelector('.img-preview');
+                
+                image.style.display = 'block';
+                const oFReader = new FileReader();
+                oFReader.readAsDataURL(input.files[0]);
+
+                oFReader.onload = function(oFREvent) {
+                    image.src = oFREvent.target.result;
+      
+      }
+     }
+    
+
     </script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
          <link rel="stylesheet" type="text/css" href="/css/trix.css">
