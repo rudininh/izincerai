@@ -47,7 +47,13 @@
 
   <div class="mb-3">
     <label for="formFile" class="form-label">Post Image</label>
-    <img class="img-preview img-fluid mb-3 col-sm-5">
+    <input type="hidden" name="oldImage" value="{{  $post->image }}">
+    @if($post->image)
+      <img src="{{ asset('storage/' . $post->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+    @else
+      <img class="img-preview img-fluid mb-3 col-sm-5">
+    @endif
+   
     <input class="form-control  @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()" >
 
     @error('image')
@@ -83,6 +89,21 @@
       document.addEventListener('trix-file-accept', function(e){
         e.preventDefault();
       })
+
+       function previewImage() {
+
+        const input = document.querySelector('#image');
+                const image = document.querySelector('.img-preview');
+                
+                image.style.display = 'block';
+                const oFReader = new FileReader();
+                oFReader.readAsDataURL(input.files[0]);
+
+                oFReader.onload = function(oFREvent) {
+                    image.src = oFREvent.target.result;
+      
+      }
+     }
     </script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
