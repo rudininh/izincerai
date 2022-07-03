@@ -25,7 +25,7 @@
                 {!! $post->body !!}
             </article>
         
-            <a href="/posts" class="d-block mt-3">Back To Posts</a>
+            <a href="/posts" class="d-block mt-3">Back To Postsasd</a>
         </div>
     </div>
 </div>
