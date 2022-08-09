@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\AdminCategoryController;
 use App\Models\Category;
 
 use Illuminate\Support\Facades\Route;
@@ -75,3 +75,5 @@ Route::get('/dashboard', function(){
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
 Route::get('/dashboard/post/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
+
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('auth');
