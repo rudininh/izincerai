@@ -24,14 +24,14 @@ use App\Http\Controllers\DashboardPostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', [
-         "title" => "Home",
-         "active" => "home"
+// Route::get('/', function () {
+//     return view('welcome', [
+//          "title" => "Home",
+//          "active" => "home"
 
-    ]);
+//     ]);
    
-});
+// });
 
 Route::get('/about', function () {
     return view('about', [
@@ -57,7 +57,10 @@ return view('categories',[
 
 });
 
+Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+
+
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 

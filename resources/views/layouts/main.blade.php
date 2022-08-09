@@ -20,7 +20,7 @@
       {{-- My Style --}}
       <link rel="stylesheet" href="/css/style.css">
     
-    <title>RUDINI BLOG | {{ $title }}</title>
+    <title>SI CERAI v.1 BKD, Diklat Banjarmasin | {{ $title }}</title>
   </head>
   <body>
 
