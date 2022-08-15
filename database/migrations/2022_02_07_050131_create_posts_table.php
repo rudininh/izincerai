@@ -17,7 +17,22 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->string('title');
+            $table->string('nama_pasien');
+            $table->string('nip');
+            $table->string('tempat_lahir');
+            $table->string('tanggal_lahir');
+            $table->string('pangkat');
+            $table->string('jabatan');
+            $table->string('alamat');
+            $table->string('no_hp');
+            $table->string('nama_pasangan');
+            $table->string('nip_pasangan');
+            $table->string('tempat_lahir_pasangan');
+            $table->string('pangkat_pasangan');
+            $table->string('jabatan_pasangan');
+            $table->string('alamat_pasangan');
+            $table->string('hp_pasangan');
+            
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->text('excerpt');
