@@ -13,7 +13,7 @@
       @endif
 
        <div class="table-responsive col-lg-8">
-         <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new posts</a>
+         <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Buat Data Baru</a>
         <table class="table table-striped table-sm">
           <thead>
             <tr>
