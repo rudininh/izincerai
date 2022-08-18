@@ -9,10 +9,11 @@
 <div class="col-lg-8">
  <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data" >
     @csrf
+
   <div class="mb-3">
-    <label for="title" class="form-label">Title</label>
-    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title') }}">
-    @error('title')
+    <label for="nama_pegawai" class="form-label">Nama Pegawai</label>
+    <input type="text" class="form-control @error('nama_pegawai') is-invalid @enderror" id="nama_pegawai" name="nama_pegawai" required autofocus value="{{ old('nama_pegawai') }}">
+    @error('nama_pegawai')
 
      <div class="invalid-feedback">
       {{ $message }}
@@ -20,7 +21,21 @@
 
     @enderror
   </div>
-   <div class="mb-3">
+
+  <div class="mb-3">
+    <label for="nip_pegawai" class="form-label">NIP Pegawai</label>
+    <input type="text" class="form-control @error('nip_pegawai') is-invalid @enderror" id="nip_pegawai" name="nip_pegawai" required autofocus value="{{ old('nip_pegawai') }}">
+    @error('nip_pegawai')
+
+     <div class="invalid-feedback">
+      {{ $message }}
+     </div>
+
+    @enderror
+  </div>
+
+
+   {{-- <div class="mb-3">
     <label for="slug" class="form-label">Slug</label>
     <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
     @error('slug')
@@ -30,7 +45,7 @@
      </div>
 
     @enderror
-  </div>
+  </div> --}}
   <div class="mb-3">
     <label for="category" class="form-label">Category</label>
     <select class="form-select" name="category_id">
