@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('nama_pegawai');
             $table->string('nip_pegawai');
             $table->string('tempat_lahir_pegawai');
-            $table->string('tanggal_lahir');
+            $table->string('tanggal_lahir_pegawai');
             $table->string('pangkat');
             $table->string('jabatan');
             $table->string('alamat');
