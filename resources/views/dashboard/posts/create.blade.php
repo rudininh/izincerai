@@ -4,15 +4,20 @@
  
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Create New Post</h1>
+        <h1 class="h2">Buat Data Izin Cerai Baru</h1>
     </div>
+
+    
+
 <div class="col-lg-8">
- <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data" >
+ <form method="post" action="/dashboard/posts" class="row mb-5" enctype="multipart/form-data" >
     @csrf
+
+
   <div class="mb-3">
-    <label for="title" class="form-label">Title</label>
-    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title') }}">
-    @error('title')
+    <label for="nama_pegawai" class="form-label">Nama Pegawai</label>
+    <input type="text" class="form-control @error('nama_pegawai') is-invalid @enderror" id="nama_pegawai" name="nama_pegawai" required autofocus value="{{ old('nama_pegawai') }}">
+    @error('nama_pegawai')
 
      <div class="invalid-feedback">
       {{ $message }}
@@ -20,7 +25,49 @@
 
     @enderror
   </div>
-   <div class="mb-3">
+
+  <div class="mb-3">
+    <label for="nip_pegawai" class="form-label">NIP Pegawai</label>
+    <input type="text" class="form-control @error('nip_pegawai') is-invalid @enderror" id="nip_pegawai" name="nip_pegawai" required autofocus value="{{ old('nip_pegawai') }}">
+    @error('nip_pegawai')
+
+     <div class="invalid-feedback">
+      {{ $message }}
+     </div>
+
+    @enderror
+  </div>
+
+  
+  <div class="col-md-6">
+    <label for="tempat_lahir_pegawai" class="form-label">Tempat Lahir Pegawai</label>
+    <input type="text" class="form-control @error('tempat_lahir_pegawai') is-invalid @enderror" id="tempat_lahir_pegawai" name="tempat_lahir_pegawai" required autofocus value="{{ old('tempat_lahir_pegawai') }}">
+    @error('tempat_lahir_pegawai')
+
+     <div class="invalid-feedback">
+      {{ $message }}
+     </div>
+
+    @enderror
+  </div>
+  
+  <div class="col-md-6">
+    <label for="tanggal_lahir_pegawai" class="form-label">Tanggal Lahir Pegawai</label>
+    <input type="date" data-date-format="DD MMMM YYYY" class="form-control @error('tanggal_lahir_pegawai') is-invalid @enderror" id="tanggal_lahir_pegawai" name="tanggal_lahir_pegawai" required autofocus value="{{ old('tanggal_lahir_pegawai') }}">
+    @error('tanggal_lahir_pegawai')
+
+     <div class="invalid-feedback">
+      {{ $message }}
+     </div>
+
+    @enderror
+  </div>
+  
+
+
+
+
+   {{-- <div class="mb-3">
     <label for="slug" class="form-label">Slug</label>
     <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
     @error('slug')
@@ -30,7 +77,7 @@
      </div>
 
     @enderror
-  </div>
+  </div> --}}
   <div class="mb-3">
     <label for="category" class="form-label">Category</label>
     <select class="form-select" name="category_id">
