@@ -20,7 +20,7 @@
               <th scope="col">No</th>
               <th scope="col">Nama</th>
               <th scope="col">NIP</th>
-              <th scope="col">Action</th>
+              <th scope="col">JAbatan</th>
             </tr>
           </thead>
           <tbody>
