@@ -79,7 +79,7 @@
     @enderror
   </div> --}}
   <div class="mb-3">
-    <label for="category" class="form-label">Category</label>
+    <label for="category" class="form-label">Pangkat/Gol.Ruang</label>
     <select class="form-select" name="category_id">
       @foreach ($categories as $category)
       @if(old('category_id') == $category->id)
