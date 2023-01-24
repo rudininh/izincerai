@@ -15,6 +15,9 @@ class CreatePangkatsTable extends Migration
     {
         Schema::create('pangkats', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_pangkat')->unique();
+            $table->string('golongan_pangkat')->unique();
+            $table->string('ruang_pangkat')->unique();
             $table->timestamps();
         });
     }

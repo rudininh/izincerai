@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Pangkat;
 use App\Models\Post;
 
 
@@ -32,7 +33,8 @@ class DatabaseSeeder extends Seeder
         'password' => bcrypt('123456')
       ]);
  
-       Category::create([
+    
+        Category::create([
         'name' => 'Web Programming',
         'slug' => 'web-programming'
 
@@ -48,6 +50,12 @@ class DatabaseSeeder extends Seeder
         'name' => 'Web Design',
         'slug' => 'web-design'
 
+      ]);
+
+      Pangkat::create([
+        'nama_pangkat' => 'Juru Muda',
+        'golongan_pangkat' => 'I/',
+        'ruang_pangkat' => 'a'
       ]);
  
       User::factory(3)->create();
