@@ -80,12 +80,12 @@
   </div> --}}
   <div class="mb-3">
     <label for="category" class="form-label">Pangkat/Gol.Ruang</label>
-    <select class="form-select" name="category_id">
-      @foreach ($categories as $category)
-      @if(old('category_id') == $category->id)
-      <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+    <select class="form-select" name="pangkats">
+      @foreach ($pangkats as $Pangkat)
+      @if(old('pangkat_id') == $pangkat->id)
+      <option value="{{ $pangkat->id }}" selected>{{ $pangkat->nama }}</option>
       @else
-      <option value="{{ $category->id }}">{{ $category->name }}</option>
+      <option value="{{ $pangkat->id }}">{{ $category->nama }}</option>
       @endif
       @endforeach
     </select>

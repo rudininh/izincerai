@@ -24,14 +24,14 @@
           </thead>
           <tbody>
 
-            @foreach ($categories as $Pangkat)
+            @foreach ($pangkats as $pangkat)
             <tr>
               <td>{{ $loop->iteration }}</td>
-              <td>{{ $Pangkat->name }}</td>
+              <td>{{ $pangkat->nama_pangkat }}</td>
               <td>
-                  <a href="/dashboard/categories/{{ $Pangkat->slug }}" class="badge bg-info" ><span data-feather="eye"></span></a>
-                  <a href="/dashboard/categories/{{ $Pangkat->slug }}/edit" class="badge bg-warning" ><span data-feather="edit"></span></a>
-                  <form action="/dashboard/categories/{{ $Pangkat->slug }}" method="post" class="d-inline">
+                  <a href="/dashboard/categories/{{ $pangkat->slug }}" class="badge bg-info" ><span data-feather="eye"></span></a>
+                  <a href="/dashboard/categories/{{ $pangkat->slug }}/edit" class="badge bg-warning" ><span data-feather="edit"></span></a>
+                  <form action="/dashboard/categories/{{ $pangkat->slug }}" method="post" class="d-inline">
                   @method('delete')
                   @csrf
                   <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>

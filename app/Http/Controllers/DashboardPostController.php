@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Pangkat;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Str;
@@ -32,7 +33,7 @@ class DashboardPostController extends Controller
     public function create()
     {
         return view('dashboard.posts.create', [
-            'categories' => Category::all()
+            'pangkats' => Pangkat::all()
         ]);
     }
 
@@ -91,7 +92,7 @@ class DashboardPostController extends Controller
           return view('dashboard.posts.edit', [
             'post' => $post,
             
-            'categories' => Category::all()
+        'pangkats' => Pangkat::all()
         ]);
     }
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\category;
 use Illuminate\Http\Request;
+use App\Models\Pangkat;
+
 
 class AdminCategoryController extends Controller
 {
@@ -15,7 +17,7 @@ class AdminCategoryController extends Controller
     public function index()
     {
         return view('dashboard.categories.index', [
-            'categories' => Category::all()
+            'pangkats' => Pangkat::all()
         ]);
     }
 
