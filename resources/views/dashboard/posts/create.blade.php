@@ -38,6 +38,20 @@
     @enderror
   </div>
 
+  <div class="mb-3">
+
+    <label for="nip_pegawai" class="form-label">Pangkat/Golongan Pegawai</label>
+        
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Pangkat</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+
+  </div>
+
+
   
   <div class="col-md-6">
     <label for="tempat_lahir_pegawai" class="form-label">Tempat Lahir Pegawai</label>
@@ -78,7 +92,7 @@
 
     @enderror
   </div> --}}
-  <div class="mb-3">
+  {{-- <div class="mb-3">
     <label for="category" class="form-label">Pangkat/Gol.Ruang</label>
     <select class="form-select" name="pangkats">
       @foreach ($pangkats as $Pangkat)
@@ -89,7 +103,7 @@
       @endif
       @endforeach
     </select>
-  </div>
+  </div> --}}
 
 
 
